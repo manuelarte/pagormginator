@@ -12,6 +12,7 @@ type PageRequest struct {
 // Page Struct that contains the result of the query
 type Page[T any] struct {
 	TotalPages    int
+	Page          int
 	Size          int
 	TotalElements int
 	Data          []*T
