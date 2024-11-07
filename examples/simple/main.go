@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/manuelarte/pagormginator/pkg"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -17,6 +18,7 @@ func main() {
 		panic("failed to connect database")
 	}
 
+	db.Use(pkg.Pagorminator{})
 	// Migrate the schema
 	db.AutoMigrate(&Product{})
 
