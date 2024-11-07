@@ -1,4 +1,4 @@
-module pagorminator
+module github.com/manuelarte/pagorminator
 
 go 1.18
 
